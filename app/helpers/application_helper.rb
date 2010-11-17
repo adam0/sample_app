@@ -7,5 +7,10 @@ module ApplicationHelper
       else
         "#{base_title} | #{@title}"
       end
-    end  
+    end
+    
+  # Retrieve and link Logo
+    def logo
+      image_tag("logo.png", :alt => "Sample App", :class => "round")
+    end    
 end

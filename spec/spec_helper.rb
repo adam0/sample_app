@@ -10,7 +10,7 @@ Spork.prefork do
   unless defined?(Rails)
       require File.dirname(__FILE__) + "/../config/environment"
     end
-    require 'rspec/rails'
+    require 'rspec/rails' 
 
   # Requires supporting files with custom matchers and macros, etc,
   # in ./support/ and its subdirectories.
@@ -37,6 +37,11 @@ Spork.prefork do
         # Emulate initializer set_clear_dependencies_hook in 
         # railties/lib/rails/application/bootstrap.rb
         ActiveSupport::Dependencies.clear
+        
+
+  end
+  def test_sign_in(user)
+    controller.sign_in(user)
   end
 end
 
